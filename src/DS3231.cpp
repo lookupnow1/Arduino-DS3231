@@ -38,6 +38,7 @@ const uint8_t dowArray[] PROGMEM = { 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 };
 
 bool DS3231::begin(void)
 {
+    RTC.begin();
     Wire.begin();
 
     setBattery(true, false);
